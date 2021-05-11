@@ -1,65 +1,125 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useDisclosure } from '@chakra-ui/hooks'
+import {
+  Container,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  SimpleGrid,
+  Spacer,
+} from '@chakra-ui/layout'
+import { useBreakpointValue } from '@chakra-ui/media-query'
+import { useState } from 'react'
+import DesktopFilterBar from '../components/Filter/DesktopFilterBar'
+import MobileFilterBar from '../components/Filter/MobileFilterBar'
+import Header from '../components/Header'
+import ItemCount from '../components/ItemCount'
+import ProductCard from '../components/ProductCard'
+import SortButton from '../components/SortButton'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 export default function Home() {
+  const [sort, setSort] = useState('Relevanz')
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const FilterBarSwitcher = useBreakpointValue({
+    base: <MobileFilterBar onOpen={onOpen} isOpen={isOpen} onClose={onClose} />,
+    lg: <DesktopFilterBar />,
+  })
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Container maxW="1200px" p={0}>
+      <Header />
+      <Grid
+        h="auto"
+        mt="60px"
+        position="absolute"
+        maxW="1200px"
+        templateRows="repeat(4, 100%)"
+        templateColumns={{ base: 'repeat(4, 1fr)', md: '220px repeat(4, 1fr)' }}
+        gap={4}
+        p={2}
+      >
+        <GridItem
+          colSpan={6}
+          px={[1, 1, 1, 4]}
+          py={1}
+          fontStyle="italic"
+          fontWeight="normal"
+          fontSize="13px"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+          <Breadcrumbs />
+        </GridItem>
+        {FilterBarSwitcher}
+        <GridItem colSpan={[6, 6, 6, 5]} py={1}>
+          <Heading py={2} fontWeight="900" fontSize="xl" color="gray.700">
+            Sneaker
+          </Heading>
+        </GridItem>
+        <GridItem
+          as={Flex}
+          colSpan={[6, 6, 6, 5]}
+          py={1}
+          justify="space-between"
+          borderBottom="1px"
+          borderColor="gray.200"
+        >
+          <ItemCount count="1.234" onOpen={onOpen} />
+          <Spacer />
+          <SortButton sort={sort} setSort={setSort} />
+        </GridItem>
+        <GridItem colSpan={[6, 6, 6, 5]}>
+          <SimpleGrid columns={[2, 2, 3, 4]} spacingX="15px" spacingY="15px">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </SimpleGrid>
+        </GridItem>
+        <GridItem colSpan={6} bg="tomato" p={4} />
+      </Grid>
+    </Container>
   )
 }
