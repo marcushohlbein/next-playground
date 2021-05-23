@@ -11,7 +11,7 @@ export default function Logo(props) {
       fontWeight="800"
       {...props}
     >
-      <Text color={['white', 'white', 'white', 'blue.800']} mr="-3px">
+      <Text color="blue.800" mr="-3px">
         sneaker
       </Text>
       <Text

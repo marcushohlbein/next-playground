@@ -30,7 +30,7 @@ const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
     <title>Close</title>
     <path
-      fill="white"
+      fill="gray.700"
       d="M9.00023 7.58599L13.9502 2.63599L15.3642 4.04999L10.4142 8.99999L15.3642 13.95L13.9502 15.364L9.00023 10.414L4.05023 15.364L2.63623 13.95L7.58623 8.99999L2.63623 4.04999L4.05023 2.63599L9.00023 7.58599Z"
     />
   </svg>
@@ -41,7 +41,7 @@ const MenuIcon = () => (
     width="24px"
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
-    fill="white"
+    fill="gray.700"
   >
     <title>Menu</title>
     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -89,7 +89,12 @@ const SearchBar = () => {
 const MenuItem = ({ children, isLast, to = '/', ...rest }) => {
   return (
     <Link href={to}>
-      <Text fontWeight="bold" display="block" {...rest}>
+      <Text
+        fontSize={{ base: '2xl', md: 'md' }}
+        fontWeight="bold"
+        display="block"
+        {...rest}
+      >
         {children}
       </Text>
     </Link>
@@ -105,10 +110,9 @@ const MenuLinks = ({ isOpen }) => {
       <Stack
         spacing={8}
         align="center"
-        justify={['center', 'flex-end', 'flex-end', 'flex-end']}
+        justify={['center', 'center', 'flex-end', 'flex-end']}
         direction={['column', 'column', 'row', 'row']}
-        pt={[4, 4, 4, 0]}
-        zIndex={10}
+        py={[4, 4, 4, 0]}
       >
         <MenuItem to="/">Sneaker</MenuItem>
         <MenuItem to="/how">Sale</MenuItem>
@@ -136,15 +140,15 @@ const NavBarContainer = ({ children, ...props }) => {
   return (
     <Flex
       as="nav"
-      h="55px"
       align="center"
       justify="space-between"
       wrap="wrap"
       w="100%"
       maxW="1200px"
       px={4}
-      bg={['blue.800', 'blue.800', 'blue.800', 'white']}
-      color={['white', 'white', 'white', 'gray.700']}
+      py={{ base: 3, md: 1 }}
+      bg="white"
+      color="gray.700"
       position="fixed"
       boxShadow="sm"
       zIndex="100"

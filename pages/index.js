@@ -72,7 +72,7 @@ export default function Home() {
         </GridItem>
         <GridItem colSpan={[6, 6, 6, 5]}>
           <SimpleGrid columns={[2, 2, 3, 4]} spacingX="15px" spacingY="15px">
-            <ProductCard onClick={() => alert('Product clicked!')} />
+            <ProductCard />
             <ProductCard />
             <ProductCard />
             <ProductCard />
