@@ -67,12 +67,12 @@ export default function Home() {
           borderColor="gray.200"
         >
           <ItemCount count="1.234" onOpen={onOpen} />
-          <Spacer bg="black.600" />
+          <Spacer />
           <SortButton sort={sort} setSort={setSort} />
         </GridItem>
         <GridItem colSpan={[6, 6, 6, 5]}>
           <SimpleGrid columns={[2, 2, 3, 4]} spacingX="15px" spacingY="15px">
-            <ProductCard />
+            <ProductCard onClick={() => alert('Product clicked!')} />
             <ProductCard />
             <ProductCard />
             <ProductCard />

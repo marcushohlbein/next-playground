@@ -106,12 +106,13 @@ const MenuLinks = ({ isOpen }) => {
         spacing={8}
         align="center"
         justify={['center', 'flex-end', 'flex-end', 'flex-end']}
-        direction={['column', 'row', 'row', 'row']}
+        direction={['column', 'column', 'row', 'row']}
         pt={[4, 4, 4, 0]}
+        zIndex={10}
       >
         <MenuItem to="/">Sneaker</MenuItem>
         <MenuItem to="/how">Sale</MenuItem>
-        <MenuItem to="/faetures">Upcoming</MenuItem>
+        <MenuItem to="/features">Upcoming</MenuItem>
         <MenuItem to="/pricing">Brands</MenuItem>
         {/* <MenuItem to="/signup" isLast>
           <Button

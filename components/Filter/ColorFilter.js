@@ -13,7 +13,10 @@ export default function ColorFilter() {
       {({ isExpanded }) => (
         <>
           <h2>
-            <AccordionButton _focus={{ outline: 'none' }}>
+            <AccordionButton
+              _focus={{ outline: 'none' }}
+              _hover={{ bg: 'white' }}
+            >
               <Box
                 flex="1"
                 textAlign="left"
