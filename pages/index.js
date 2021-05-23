@@ -35,7 +35,6 @@ export default function Home() {
       <Grid
         h="auto"
         mt="60px"
-        position="absolute"
         maxW="1200px"
         templateRows="repeat(4, 100%)"
         templateColumns={{ base: 'repeat(4, 1fr)', md: '220px repeat(4, 1fr)' }}
@@ -45,7 +44,6 @@ export default function Home() {
       >
         <GridItem
           colSpan={6}
-          h="auto"
           px={[1, 1, 1, 4]}
           py={1}
           fontStyle="italic"
