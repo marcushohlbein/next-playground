@@ -35,8 +35,8 @@ export default function Home() {
       <Grid
         h="auto"
         mt="60px"
+        position="absolute"
         maxW="1200px"
-        templateRows="repeat(4, 100%)"
         templateColumns={{ base: 'repeat(4, 1fr)', md: '220px repeat(4, 1fr)' }}
         gap={4}
         p={2}
