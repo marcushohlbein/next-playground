@@ -45,6 +45,7 @@ export default function Home() {
       >
         <GridItem
           colSpan={6}
+          h="auto"
           px={[1, 1, 1, 4]}
           py={1}
           fontStyle="italic"
@@ -78,7 +79,7 @@ export default function Home() {
           bg="blue.300"
         >
           <ItemCount count="1.234" onOpen={onOpen} />
-          <Spacer />
+          <Spacer bg="black.600" />
           <SortButton sort={sort} setSort={setSort} />
         </GridItem>
         <GridItem colSpan={[6, 6, 6, 5]} bg="cyan.400">
