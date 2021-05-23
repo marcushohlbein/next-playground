@@ -33,14 +33,12 @@ export default function Home() {
     <Container maxW="1200px" p={0}>
       <Header />
       <Grid
-        h="auto"
         mt="60px"
         position="absolute"
         maxW="1200px"
         templateColumns={{ base: 'repeat(4, 1fr)', md: '220px repeat(4, 1fr)' }}
         gap={4}
         p={2}
-        bg="teal.100"
       >
         <GridItem
           colSpan={6}
@@ -49,7 +47,6 @@ export default function Home() {
           fontStyle="italic"
           fontWeight="normal"
           fontSize="13px"
-          bg="orange.500"
         >
           <Breadcrumbs />
         </GridItem>
@@ -57,13 +54,7 @@ export default function Home() {
         {FilterBarSwitcher}
 
         <GridItem colSpan={[6, 6, 6, 5]} py={1}>
-          <Heading
-            py={2}
-            fontWeight="900"
-            fontSize="xl"
-            color="gray.700"
-            bg="red.400"
-          >
+          <Heading py={2} fontWeight="900" fontSize="xl" color="gray.700">
             Sneaker
           </Heading>
         </GridItem>
@@ -74,13 +65,12 @@ export default function Home() {
           justify="space-between"
           borderBottom="1px"
           borderColor="gray.200"
-          bg="blue.300"
         >
           <ItemCount count="1.234" onOpen={onOpen} />
           <Spacer bg="black.600" />
           <SortButton sort={sort} setSort={setSort} />
         </GridItem>
-        <GridItem colSpan={[6, 6, 6, 5]} bg="cyan.400">
+        <GridItem colSpan={[6, 6, 6, 5]}>
           <SimpleGrid columns={[2, 2, 3, 4]} spacingX="15px" spacingY="15px">
             <ProductCard />
             <ProductCard />
