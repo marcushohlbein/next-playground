@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/layout'
 import { useBreakpointValue } from '@chakra-ui/media-query'
 import { useState } from 'react'
-import DesktopFilterBar from '../components/Filter/DesktopFilterBar'
+import DesktopFilter from '../components/Filter/DesktopFilterBar'
 import MobileFilterBar from '../components/Filter/MobileFilterBar'
 import Header from '../components/Header'
 import ItemCount from '../components/ItemCount'
@@ -21,10 +21,14 @@ import Breadcrumbs from '../components/Breadcrumbs'
 export default function Home() {
   const [sort, setSort] = useState('Relevanz')
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const [defaultIndex] = useState([0, 1, 2, 3])
   const FilterBarSwitcher = useBreakpointValue({
-    base: <MobileFilterBar onOpen={onOpen} isOpen={isOpen} onClose={onClose} />,
-    lg: <DesktopFilterBar />,
+    base: (
+      <MobileFilterBar dfi={defaultIndex} isOpen={isOpen} onClose={onClose} />
+    ),
+    lg: <DesktopFilter dfi={defaultIndex} />,
   })
+
   return (
     <Container maxW="1200px" p={0}>
       <Header />
@@ -48,7 +52,9 @@ export default function Home() {
         >
           <Breadcrumbs />
         </GridItem>
+
         {FilterBarSwitcher}
+
         <GridItem colSpan={[6, 6, 6, 5]} py={1}>
           <Heading py={2} fontWeight="900" fontSize="xl" color="gray.700">
             Sneaker

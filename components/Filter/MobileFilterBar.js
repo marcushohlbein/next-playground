@@ -14,7 +14,7 @@ import ColorFilter from './ColorFilter'
 import GenderFilter from './GenderFilter'
 import SizeFilter from './SizeFilter'
 
-export default function MobileFilterBar({ isOpen, onOpen, onClose }) {
+export default function MobileFilterBar({ dfi, isOpen, onClose }) {
   return (
     <>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
@@ -32,12 +32,11 @@ export default function MobileFilterBar({ isOpen, onOpen, onClose }) {
           </DrawerHeader>
 
           <DrawerBody p={1}>
-            <Accordion defaultIndex={[0, 1, 2, 3]} allowMultiple>
+            <Accordion defaultIndex={dfi} allowMultiple reduceMotion="true">
               <SizeFilter />
               <BrandFilter />
               <GenderFilter />
               <ColorFilter />
-              {console.log('Render Filter')}
             </Accordion>
           </DrawerBody>
 

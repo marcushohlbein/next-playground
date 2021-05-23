@@ -6,7 +6,7 @@ import ColorFilter from './ColorFilter'
 import GenderFilter from './GenderFilter'
 import SizeFilter from './SizeFilter'
 
-export default function DesktopFilterBar() {
+export default function DesktopFilterBar({ dfi }) {
   return (
     <GridItem
       as="aside"
@@ -14,7 +14,7 @@ export default function DesktopFilterBar() {
       rowSpan={3}
       colSpan={1}
     >
-      <Accordion defaultIndex={[0, 1, 2, 3]} allowMultiple>
+      <Accordion defaultIndex={dfi} allowMultiple reduceMotion="true">
         <SizeFilter />
         <BrandFilter />
         <GenderFilter />
