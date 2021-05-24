@@ -39,7 +39,6 @@ export default function Header(props) {
   return (
     <NavBarContainer pos={pos} {...props}>
       <Logo color={['white', 'white', 'white', 'blue.700']} />
-      <Spacer />
       <SearchBar />
       <MenuToggle onOpen={onOpen} isOpen={isOpen} onClose={onClose} />
       <MenuLinks isOpen={isOpen} />
@@ -203,7 +202,7 @@ const MenuLinks = () => {
 
 const SearchBar = () => {
   return (
-    <Box w="100%" p={[6, 8, 8, 12]}>
+    <Box w="100%" px={[6, 8, 8, 12]}>
       <InputGroup>
         <InputLeftElement
           pointerEvents="none"
@@ -217,8 +216,10 @@ const SearchBar = () => {
           color="gray.500"
           h={{ base: '35px', md: '40px' }}
           bg={{ base: 'gray.100', md: 'white' }}
-          borderColor="gray.100"
+          border={{ base: 'none', md: '1px' }}
+          borderColor={{ md: 'gray.200' }}
           _focus={{ outline: 'none' }}
+          _placeholder={{ color: 'gray.600' }}
         />
       </InputGroup>
     </Box>
