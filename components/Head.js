@@ -71,7 +71,7 @@ const MenuToggle = ({ isOpen, onOpen, onClose }) => {
           <DrawerBody p={0}>
             <MenuItem
               fontWeight="700"
-              fontSize="lg"
+              fontSize="md"
               color="gray.600"
               borderBottom="1px"
               borderColor="gray.200"
@@ -85,7 +85,7 @@ const MenuToggle = ({ isOpen, onOpen, onClose }) => {
             </MenuItem>
             <MenuItem
               fontWeight="700"
-              fontSize="lg"
+              fontSize="md"
               color="gray.600"
               borderBottom="1px"
               borderColor="gray.200"
@@ -99,7 +99,7 @@ const MenuToggle = ({ isOpen, onOpen, onClose }) => {
             </MenuItem>
             <MenuItem
               fontWeight="700"
-              fontSize="lg"
+              fontSize="md"
               color="gray.600"
               borderBottom="1px"
               borderColor="gray.200"
@@ -113,7 +113,7 @@ const MenuToggle = ({ isOpen, onOpen, onClose }) => {
             </MenuItem>
             <MenuItem
               fontWeight="700"
-              fontSize="lg"
+              fontSize="md"
               color="gray.600"
               borderBottom="1px"
               borderColor="gray.200"
