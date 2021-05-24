@@ -1,4 +1,3 @@
-import { Button } from '@chakra-ui/button'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
 import { Box } from '@chakra-ui/layout'
 import { Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/menu'

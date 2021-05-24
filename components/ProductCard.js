@@ -22,8 +22,8 @@ export default function ProductCard() {
       borderRadius="lg"
       overflow="hidden"
       _hover={{
-        boxShadow: { md: 'md' },
-        borderColor: { md: 'gray.300' },
+        boxShadow: { lg: 'md' },
+        borderColor: { lg: 'gray.300' },
       }}
     >
       <Image p={4} src={property.imageUrl} alt={property.imageAlt} />

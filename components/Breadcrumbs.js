@@ -10,7 +10,7 @@ export default function Breadcrumbs() {
   return (
     <>
       <Breadcrumb
-        spacing="8px"
+        spacing={1}
         separator={<ChevronRightIcon color="gray.500" />}
         color="gray.500"
       >

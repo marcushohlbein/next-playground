@@ -16,7 +16,7 @@ export default function Logo(props) {
       </Text>
       <Text
         color="red.500"
-        letterSpacing="-5px"
+        letterSpacing="-4px"
         fontSize={{ base: '2xl', md: '4xl' }}
       >
         24

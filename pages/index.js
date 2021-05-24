@@ -12,7 +12,7 @@ import { useBreakpointValue } from '@chakra-ui/media-query'
 import { useState } from 'react'
 import DesktopFilter from '../components/Filter/DesktopFilterBar'
 import MobileFilterBar from '../components/Filter/MobileFilterBar'
-import Header from '../components/Header'
+import Head from '../components/Head'
 import ItemCount from '../components/ItemCount'
 import ProductCard from '../components/ProductCard'
 import SortButton from '../components/SortButton'
@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <Container maxW="1200px" p={0}>
-      <Header />
+      <Head />
       <Grid
         mt="60px"
         position="absolute"
@@ -42,7 +42,7 @@ export default function Home() {
       >
         <GridItem
           colSpan={6}
-          px={[1, 1, 1, 4]}
+          px={[0, 0, 0, 4]}
           py={1}
           fontStyle="italic"
           fontWeight="normal"

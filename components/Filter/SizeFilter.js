@@ -34,11 +34,11 @@ export default function SizeFilter() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={6}>
-            <Wrap spacing={1} letterSpacing="tighter">
+            <Wrap spacing={{ base: 0.5, lg: 1 }} letterSpacing="tighter">
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -56,7 +56,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -74,7 +74,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -92,7 +92,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -110,7 +110,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -128,7 +128,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -146,7 +146,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -164,7 +164,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -182,7 +182,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -200,7 +200,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -218,7 +218,7 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"
@@ -236,7 +236,151 @@ export default function SizeFilter() {
               <WrapItem>
                 <Center
                   w="44px"
-                  p={1.5}
+                  p={1}
+                  border="1px"
+                  borderColor="gray.300"
+                  color="gray.600"
+                  fontWeight="600"
+                  fontSize="13px"
+                  cursor="pointer"
+                  _hover={{
+                    bg: 'blue.700',
+                    color: 'white',
+                  }}
+                >
+                  43.5
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center
+                  w="44px"
+                  p={1}
+                  border="1px"
+                  borderColor="gray.300"
+                  color="gray.600"
+                  fontWeight="600"
+                  fontSize="13px"
+                  cursor="pointer"
+                  _hover={{
+                    bg: 'blue.700',
+                    color: 'white',
+                  }}
+                >
+                  42
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center
+                  w="44px"
+                  p={1}
+                  border="1px"
+                  borderColor="gray.300"
+                  color="gray.600"
+                  fontWeight="600"
+                  fontSize="13px"
+                  cursor="pointer"
+                  _hover={{
+                    bg: 'blue.700',
+                    color: 'white',
+                  }}
+                >
+                  42.5
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center
+                  w="44px"
+                  p={1}
+                  border="1px"
+                  borderColor="gray.300"
+                  color="gray.600"
+                  fontWeight="600"
+                  fontSize="13px"
+                  cursor="pointer"
+                  _hover={{
+                    bg: 'blue.700',
+                    color: 'white',
+                  }}
+                >
+                  43
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center
+                  w="44px"
+                  p={1}
+                  border="1px"
+                  borderColor="gray.300"
+                  color="gray.600"
+                  fontWeight="600"
+                  fontSize="13px"
+                  cursor="pointer"
+                  _hover={{
+                    bg: 'blue.700',
+                    color: 'white',
+                  }}
+                >
+                  43.5
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center
+                  w="44px"
+                  p={1}
+                  border="1px"
+                  borderColor="gray.300"
+                  color="gray.600"
+                  fontWeight="600"
+                  fontSize="13px"
+                  cursor="pointer"
+                  _hover={{
+                    bg: 'blue.700',
+                    color: 'white',
+                  }}
+                >
+                  42
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center
+                  w="44px"
+                  p={1}
+                  border="1px"
+                  borderColor="gray.300"
+                  color="gray.600"
+                  fontWeight="600"
+                  fontSize="13px"
+                  cursor="pointer"
+                  _hover={{
+                    bg: 'blue.700',
+                    color: 'white',
+                  }}
+                >
+                  42.5
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center
+                  w="44px"
+                  p={1}
+                  border="1px"
+                  borderColor="gray.300"
+                  color="gray.600"
+                  fontWeight="600"
+                  fontSize="13px"
+                  cursor="pointer"
+                  _hover={{
+                    bg: 'blue.700',
+                    color: 'white',
+                  }}
+                >
+                  43
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center
+                  w="44px"
+                  p={1}
                   border="1px"
                   borderColor="gray.300"
                   color="gray.600"

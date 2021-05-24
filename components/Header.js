@@ -146,7 +146,7 @@ const NavBarContainer = ({ children, ...props }) => {
       w="100%"
       maxW="1200px"
       px={4}
-      py={{ base: 3, md: 1 }}
+      py={{ base: 2, md: 0 }}
       bg="white"
       color="gray.700"
       position="fixed"

@@ -21,8 +21,9 @@ export default function MobileFilterBar({ dfi, isOpen, onClose }) {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader
-            p={3}
             as={Flex}
+            h="55px"
+            px={3}
             justify="center"
             bg="blue.700"
             color="white"
