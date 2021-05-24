@@ -17,7 +17,7 @@ import SizeFilter from './SizeFilter'
 export default function MobileFilterBar({ dfi, isOpen, onClose }) {
   return (
     <>
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+      <Drawer isOpen={isOpen} onClose={onClose} placement="right">
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader

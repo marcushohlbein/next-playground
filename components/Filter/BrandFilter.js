@@ -37,7 +37,7 @@ export default function BrandFilter() {
           <AccordionPanel pb={6}>
             <Stack spacing={1} justify="flex-start">
               <Checkbox
-                size="md"
+                size="lg"
                 fontWeight="600"
                 colorScheme="blue"
                 color="gray.600"
@@ -45,7 +45,7 @@ export default function BrandFilter() {
                 Nike
               </Checkbox>
               <Checkbox
-                size="md"
+                size="lg"
                 fontWeight="600"
                 colorScheme="blue"
                 color="gray.600"
@@ -53,7 +53,7 @@ export default function BrandFilter() {
                 Adidas
               </Checkbox>
               <Checkbox
-                size="md"
+                size="lg"
                 fontWeight="600"
                 colorScheme="blue"
                 color="gray.600"
@@ -61,7 +61,7 @@ export default function BrandFilter() {
                 Puma
               </Checkbox>
               <Checkbox
-                size="md"
+                size="lg"
                 fontWeight="600"
                 colorScheme="blue"
                 color="gray.600"
@@ -69,7 +69,7 @@ export default function BrandFilter() {
                 Reebok
               </Checkbox>
               <Checkbox
-                size="md"
+                size="lg"
                 fontWeight="600"
                 colorScheme="blue"
                 color="gray.600"
@@ -77,7 +77,7 @@ export default function BrandFilter() {
                 New Balance
               </Checkbox>
               <Checkbox
-                size="md"
+                size="lg"
                 fontWeight="600"
                 colorScheme="blue"
                 color="gray.600"

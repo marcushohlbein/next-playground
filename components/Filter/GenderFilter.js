@@ -37,25 +37,26 @@ export default function GenderFilter() {
           <AccordionPanel pb={6}>
             <Stack spacing={1} justify="flex-start">
               <Checkbox
-                size="md"
+                size="lg"
                 fontWeight="600"
-                colorScheme="orange"
+                colorScheme="blue"
                 color="gray.600"
+                _focus={{ boxShadow: 'none', outline: 'none' }}
               >
                 Frauen
               </Checkbox>
               <Checkbox
-                size="md"
+                size="lg"
                 fontWeight="600"
-                colorScheme="orange"
+                colorScheme="blue"
                 color="gray.600"
               >
                 Männer
               </Checkbox>
               <Checkbox
-                size="md"
+                size="lg"
                 fontWeight="600"
-                colorScheme="orange"
+                colorScheme="blue"
                 color="gray.600"
               >
                 Kinder
