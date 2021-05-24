@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Link,
   Box,
@@ -11,16 +11,32 @@ import {
   DrawerHeader,
   DrawerBody,
   useDisclosure,
+  Center,
+  Spacer,
 } from '@chakra-ui/react'
 
 import Logo from './Logo'
 
 export default function Header(props) {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const [pos, setPos] = useState('none')
+  useEffect(() => {
+    document.addEventListener('scroll', e => {
+      let scrolled = document.scrollingElement.scrollTop
+      if (scrolled >= 5) {
+        setPos('md')
+        console.log(pos)
+      } else {
+        setPos('none')
+        console.log(pos)
+      }
+    })
+  }, [])
 
   return (
-    <NavBarContainer {...props}>
+    <NavBarContainer pos={pos} {...props}>
       <Logo color={['white', 'white', 'white', 'blue.700']} />
+      <Spacer />
       <MenuToggle onOpen={onOpen} isOpen={isOpen} onClose={onClose} />
       <MenuLinks isOpen={isOpen} />
     </NavBarContainer>
@@ -151,7 +167,7 @@ const MenuItem = ({ children, isLast, to = '/', ...rest }) => {
   )
 }
 
-const MenuLinks = ({ isOpen }) => {
+const MenuLinks = () => {
   return (
     <Box
       display={{ base: 'none', lg: 'block' }}
@@ -173,28 +189,32 @@ const MenuLinks = ({ isOpen }) => {
   )
 }
 
-const NavBarContainer = ({ children, ...props }) => {
+const NavBarContainer = ({ children, pos, ...props }) => {
   return (
-    <Flex
-      as="nav"
-      h="55px"
-      align="center"
-      justify="space-between"
-      wrap="wrap"
+    <Center
       w="100%"
-      maxW="1200px"
-      px={[2, 2, 2, 5]}
-      py={{ base: 2, md: 0 }}
-      bg="white"
-      color="gray.700"
+      mt={0}
+      justify="center"
       position="fixed"
-      boxShadow="sm"
-      zIndex="100"
-      borderBottom="1px"
+      boxShadow={pos}
       borderColor="gray.100"
-      {...props}
+      zIndex="100"
     >
-      {children}
-    </Flex>
+      <Flex
+        as="nav"
+        h="55px"
+        w="100%"
+        maxWidth="1200px"
+        align="center"
+        justify="space-around"
+        px={[2, 2, 2, 5]}
+        py={{ base: 2, md: 0 }}
+        bg="white"
+        color="gray.700"
+        {...props}
+      >
+        {children}
+      </Flex>
+    </Center>
   )
 }
