@@ -71,7 +71,7 @@ export default function Home() {
             as={Flex}
             colSpan={[6, 6, 6, 5]}
             justify="space-between"
-            borderBottom="1px"
+            borderBottom={{ base: '1px', lg: 'none' }}
             //borderTop={{ base: '1px', lg: 'none' }}
             borderColor="gray.200"
           >

@@ -23,7 +23,7 @@ export default function Header(props) {
   useEffect(() => {
     document.addEventListener('scroll', e => {
       let scrolled = document.scrollingElement.scrollTop
-      if (scrolled >= 5) {
+      if (scrolled >= 10) {
         setPos('md')
         console.log(pos)
       } else {
