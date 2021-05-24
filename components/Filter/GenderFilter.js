@@ -41,7 +41,6 @@ export default function GenderFilter() {
                 fontWeight="600"
                 colorScheme="blue"
                 color="gray.600"
-                _focus={{ boxShadow: 'none', outline: 'none' }}
               >
                 Frauen
               </Checkbox>

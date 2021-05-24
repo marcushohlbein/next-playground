@@ -17,6 +17,7 @@ import ItemCount from '../components/ItemCount'
 import ProductCard from '../components/ProductCard'
 import SortButton from '../components/SortButton'
 import Breadcrumbs from '../components/Breadcrumbs'
+import FilterButton from '../components/FilterButton'
 
 export default function Home() {
   const [sort, setSort] = useState('Relevanz')
@@ -27,6 +28,10 @@ export default function Home() {
       <MobileFilterBar dfi={defaultIndex} isOpen={isOpen} onClose={onClose} />
     ),
     lg: <DesktopFilter dfi={defaultIndex} />,
+  })
+  const FilterButtonSwitcher = useBreakpointValue({
+    base: <FilterButton onOpen={onOpen} />,
+    lg: <ItemCount count="1.234" />,
   })
 
   return (
@@ -61,12 +66,12 @@ export default function Home() {
         <GridItem
           as={Flex}
           colSpan={[6, 6, 6, 5]}
-          py={1}
           justify="space-between"
           borderBottom="1px"
+          borderTop={{ base: '1px', lg: 'none' }}
           borderColor="gray.200"
         >
-          <ItemCount count="1.234" onOpen={onOpen} />
+          {FilterButtonSwitcher}
           <Spacer />
           <SortButton sort={sort} setSort={setSort} />
         </GridItem>

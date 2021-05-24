@@ -11,6 +11,7 @@ export default function SortButton({ sort, setSort }) {
         color="gray.500"
         mr={4}
         display={{ base: 'none', md: 'block' }}
+        py={1}
       >
         Sortieren nach:
       </Box>
@@ -25,7 +26,7 @@ export default function SortButton({ sort, setSort }) {
             >
               {sort} {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
             </MenuButton>
-            <MenuList minWidth="200px" boxShadow="lg" borderRadius={0} mt={-1}>
+            <MenuList minWidth="200px" boxShadow="lg" borderRadius={0} mt={-2}>
               <MenuItem
                 value="rel"
                 onClick={e => setSort(e.target.textContent)}
