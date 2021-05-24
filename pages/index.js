@@ -63,7 +63,12 @@ export default function Home() {
           {FilterBarSwitcher}
 
           <GridItem colSpan={[6, 6, 6, 5]} py={1}>
-            <Heading py={2} fontWeight="900" fontSize="xl" color="gray.700">
+            <Heading
+              py={[0, 0, 0, 2]}
+              fontWeight="900"
+              fontSize="xl"
+              color="gray.700"
+            >
               Sneaker
             </Heading>
           </GridItem>
@@ -71,7 +76,7 @@ export default function Home() {
             as={Flex}
             colSpan={[6, 6, 6, 5]}
             justify="space-between"
-            borderBottom={{ base: '1px', lg: 'none' }}
+            borderBottom="1px"
             //borderTop={{ base: '1px', lg: 'none' }}
             borderColor="gray.200"
           >

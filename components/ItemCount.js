@@ -5,7 +5,7 @@ export default function ItemCount({ count, onOpen }) {
   return (
     <>
       <Box float="left" color="gray.500" fontWeight="700" onClick={onOpen}>
-        {count} Sneaker
+        {count} Produkte
       </Box>
     </>
   )

@@ -10,12 +10,15 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerBody,
-  useDisclosure,
   Center,
   Spacer,
+  InputGroup,
+  InputLeftElement,
+  Input,
+  useDisclosure,
 } from '@chakra-ui/react'
-
 import Logo from './Logo'
+import { SearchIcon } from '@chakra-ui/icons'
 
 export default function Header(props) {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -37,6 +40,7 @@ export default function Header(props) {
     <NavBarContainer pos={pos} {...props}>
       <Logo color={['white', 'white', 'white', 'blue.700']} />
       <Spacer />
+      <SearchBar />
       <MenuToggle onOpen={onOpen} isOpen={isOpen} onClose={onClose} />
       <MenuLinks isOpen={isOpen} />
     </NavBarContainer>
@@ -180,11 +184,38 @@ const MenuLinks = () => {
         direction={['column', 'column', 'row', 'row']}
         py={[4, 4, 4, 0]}
       >
-        <MenuItem to="/">Sneaker</MenuItem>
+        <MenuItem
+          _after={{
+            content: '""',
+            height: '2px',
+          }}
+          to="/"
+        >
+          Sneaker
+        </MenuItem>
         <MenuItem to="/how">Sale</MenuItem>
         <MenuItem to="/features">Upcoming</MenuItem>
         <MenuItem to="/pricing">Brands</MenuItem>
       </Stack>
+    </Box>
+  )
+}
+
+const SearchBar = () => {
+  return (
+    <Box w="100%" p={[6, 8, 8, 12]}>
+      <InputGroup>
+        <InputLeftElement
+          pointerEvents="none"
+          children={<SearchIcon color="gray.300" />}
+        />
+        <Input
+          type="text"
+          placeholder="Suchen ..."
+          fontWeight="600"
+          _focus={{ outline: 'none' }}
+        />
+      </InputGroup>
     </Box>
   )
 }
@@ -197,6 +228,7 @@ const NavBarContainer = ({ children, pos, ...props }) => {
       justify="center"
       position="fixed"
       boxShadow={pos}
+      borderBottom="1px"
       borderColor="gray.100"
       zIndex="100"
     >

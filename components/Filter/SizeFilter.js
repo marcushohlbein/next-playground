@@ -68,7 +68,7 @@ export default function SizeFilter() {
                     color: 'white',
                   }}
                 >
-                  42.5
+                  42 ⅓
                 </Center>
               </WrapItem>
               <WrapItem>
@@ -104,7 +104,7 @@ export default function SizeFilter() {
                     color: 'white',
                   }}
                 >
-                  43.5
+                  43 ⅔
                 </Center>
               </WrapItem>
               <WrapItem>
@@ -212,7 +212,7 @@ export default function SizeFilter() {
                     color: 'white',
                   }}
                 >
-                  42.5
+                  42 ⅔
                 </Center>
               </WrapItem>
               <WrapItem>
@@ -248,7 +248,7 @@ export default function SizeFilter() {
                     color: 'white',
                   }}
                 >
-                  43.5
+                  43 ⅓
                 </Center>
               </WrapItem>
               <WrapItem>
