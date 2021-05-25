@@ -71,7 +71,7 @@ const MenuIcon = () => (
 const MenuToggle = ({ isOpen, onOpen, onClose }) => {
   return (
     <>
-      <Box display={{ base: 'block', lg: 'none' }} onClick={onOpen}>
+      <Box display={{ base: 'block', lg: 'none' }} onClick={onOpen} pr={2}>
         {isOpen ? <CloseIcon /> : <MenuIcon />}
       </Box>
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
@@ -219,7 +219,7 @@ const SearchBar = () => {
           border={{ base: 'none', md: '1px' }}
           borderColor={{ md: 'gray.200' }}
           _focus={{ outline: 'none' }}
-          _placeholder={{ color: 'gray.600' }}
+          _placeholder={{ color: 'gray.400' }}
         />
       </InputGroup>
     </Box>
