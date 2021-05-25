@@ -9,7 +9,7 @@ export default function ProductCard() {
     brand: 'Adidas',
     title: 'Yeezy Foam',
     sku: 'CW7645-003',
-    formattedPrice: '89,00 €',
+    formattedPrice: '1.389,00 €',
     reviewCount: 34,
     rating: 4,
   }

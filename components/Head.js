@@ -206,20 +206,19 @@ const SearchBar = () => {
       <InputGroup>
         <InputLeftElement
           pointerEvents="none"
-          h={{ base: '35px', md: '40px' }}
-          children={<SearchIcon color="gray.400" />}
+          h="35px"
+          children={<SearchIcon color="gray.500" />}
         />
         <Input
           type="text"
           placeholder="Suchen ..."
-          fontWeight="500"
+          fontWeight="400"
           color="gray.500"
-          h={{ base: '35px', md: '40px' }}
-          bg={{ base: 'gray.100', md: 'white' }}
-          border={{ base: 'none', md: '1px' }}
-          borderColor={{ md: 'gray.200' }}
+          h="35px"
+          bg="gray.100"
+          border="none"
           _focus={{ outline: 'none' }}
-          _placeholder={{ color: 'gray.400' }}
+          _placeholder={{ color: 'gray.500' }}
         />
       </InputGroup>
     </Box>
