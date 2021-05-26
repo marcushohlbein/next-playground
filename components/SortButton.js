@@ -26,7 +26,7 @@ export default function SortButton({ sort, setSort }) {
             >
               {sort} {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
             </MenuButton>
-            <MenuList minWidth="150px" boxShadow="lg" borderRadius={0} mt={-2}>
+            <MenuList minWidth="150px" boxShadow="lg" borderRadius={0} mt={-1}>
               <MenuItem
                 value="rel"
                 onClick={e => setSort(e.target.textContent)}

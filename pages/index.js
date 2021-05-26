@@ -18,11 +18,13 @@ import ProductCard from '../components/ProductCard'
 import SortButton from '../components/SortButton'
 import Breadcrumbs from '../components/Breadcrumbs'
 import FilterButton from '../components/FilterButton'
+import SortButtonMobile from '../components/SortButtonMobile'
 
 export default function Home() {
   const [sort, setSort] = useState('Relevanz')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [defaultIndex] = useState([0, 1, 2, 3])
+
   const FilterBarSwitcher = useBreakpointValue({
     base: (
       <MobileFilterBar dfi={defaultIndex} isOpen={isOpen} onClose={onClose} />
@@ -32,6 +34,11 @@ export default function Home() {
   const FilterButtonSwitcher = useBreakpointValue({
     base: <FilterButton onOpen={onOpen} />,
     lg: <ItemCount count="1.234" />,
+  })
+
+  const SortButtonSwitcher = useBreakpointValue({
+    base: <SortButtonMobile setSort={setSort} />,
+    lg: <SortButton sort={sort} setSort={setSort} />,
   })
 
   return (
@@ -76,13 +83,13 @@ export default function Home() {
             as={Flex}
             colSpan={[6, 6, 6, 5]}
             justify="space-between"
-            borderBottom="1px"
-            //borderTop={{ base: '1px', lg: 'none' }}
-            borderColor="gray.200"
+            alignItems="center"
+            borderBottom={{ base: 'none', lg: '1px' }}
+            borderColor={{ lg: 'gray.200' }}
           >
             {FilterButtonSwitcher}
             <Spacer />
-            <SortButton sort={sort} setSort={setSort} />
+            {SortButtonSwitcher}
           </GridItem>
           <GridItem colSpan={[6, 6, 6, 5]}>
             <SimpleGrid columns={[2, 2, 3, 4]} spacingX="15px" spacingY="15px">

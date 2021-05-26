@@ -1,21 +1,24 @@
 import { Center, Text } from '@chakra-ui/layout'
 import React from 'react'
-import { FaFilter } from 'react-icons/fa'
+import { BiSlider } from 'react-icons/bi'
 
 export default function FilterButton({ onOpen }) {
   return (
     <Center
+      w="50%"
       px={2}
-      py={1}
+      py={2}
+      mr={4}
       justify="flex-start"
       color="gray.500"
+      bg="gray.200"
       cursor="pointer"
       onClick={onOpen}
     >
       <Text fontWeight="600" mr={2} fontWeight="bold">
         Filter
       </Text>
-      <FaFilter />
+      <BiSlider size="22" />
     </Center>
   )
 }
