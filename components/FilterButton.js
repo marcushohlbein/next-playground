@@ -11,7 +11,7 @@ export default function FilterButton({ onOpen }) {
       mr={4}
       justify="flex-start"
       color="gray.500"
-      bg="gray.200"
+      bg="gray.100"
       cursor="pointer"
       onClick={onOpen}
     >
