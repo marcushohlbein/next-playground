@@ -3,6 +3,7 @@ import { Flex } from '@chakra-ui/layout'
 import {
   Drawer,
   DrawerBody,
+  DrawerCloseButton,
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
@@ -20,10 +21,16 @@ export default function MobileFilterBar({ dfi, isOpen, onClose }) {
       <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="md">
         <DrawerOverlay />
         <DrawerContent>
+          <DrawerCloseButton
+            color="white"
+            my={1}
+            _focus={{ outline: 'none' }}
+            _hover={{ bg: 'blue.700' }}
+          />
           <DrawerHeader
             as={Flex}
             h="55px"
-            px={3}
+            py={3}
             justify="center"
             bg="blue.700"
             color="white"

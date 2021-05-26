@@ -63,6 +63,7 @@ export default function Home() {
             fontStyle="italic"
             fontWeight="normal"
             fontSize="13px"
+            display={{ base: 'none', lg: 'block' }}
           >
             <Breadcrumbs />
           </GridItem>
@@ -71,10 +72,12 @@ export default function Home() {
 
           <GridItem colSpan={[6, 6, 6, 5]} py={1}>
             <Heading
+              as={Flex}
               py={[0, 0, 0, 2]}
               fontWeight="900"
               fontSize="xl"
               color="gray.700"
+              justifyContent={{ base: 'center', lg: 'flex-start' }}
             >
               Sneaker
             </Heading>
