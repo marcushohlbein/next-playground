@@ -53,7 +53,7 @@ export default function MobileFilterBar({ dfi, isOpen, onClose }) {
               justify="center"
               p={4}
               w="100%"
-              bg="orange"
+              bg="red.500"
               color="white"
               fontWeight="bold"
               cursor="pointer"

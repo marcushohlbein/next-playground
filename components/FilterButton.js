@@ -15,7 +15,7 @@ export default function FilterButton({ onOpen }) {
       cursor="pointer"
       onClick={onOpen}
     >
-      <Text fontWeight="600" mr={2} fontWeight="bold">
+      <Text fontWeight="600" mr={4} fontWeight="bold">
         Filter
       </Text>
       <BiSlider size="22" />
