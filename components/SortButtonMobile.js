@@ -11,6 +11,7 @@ export default function SortButtonMobile({ setSort }) {
       fontWeight="600"
       bg="gray.100"
       w="50%"
+      borderRadius="md"
       onChange={e => setSort(e.target.value)}
       _focus={{ outline: 'none' }}
     >

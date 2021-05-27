@@ -13,6 +13,7 @@ export default function FilterButton({ onOpen }) {
       color="gray.500"
       bg="gray.100"
       cursor="pointer"
+      borderRadius="md"
       onClick={onOpen}
     >
       <Text fontWeight="600" mr={4} fontWeight="bold">
