@@ -17,7 +17,7 @@ export default function GenderFilter() {
             <AccordionButton
               py={3}
               borderBottom={isExpanded ? 'none' : '1px'}
-              borderColor="gray.100"
+              borderColor={{ base: 'gray.100', lg: 'transparent' }}
               _focus={{ outline: 'none' }}
               _hover={{ bg: 'white' }}
             >
@@ -40,8 +40,8 @@ export default function GenderFilter() {
           <AccordionPanel
             pb={6}
             py={2}
-            borderBottom="1px"
-            borderColor="gray.100"
+            borderBottom={{ base: '1px', lg: 'none' }}
+            borderColor={{ base: 'gray.100', lg: 'transparent' }}
           >
             <Stack pb={2} spacing={1} justify="flex-start">
               <Checkbox

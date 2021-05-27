@@ -16,7 +16,7 @@ export default function ColorFilter() {
             <AccordionButton
               py={3}
               borderBottom={isExpanded ? 'none' : '1px'}
-              borderColor="gray.100"
+              borderColor={{ base: 'gray.100', lg: 'transparent' }}
               _focus={{ outline: 'none' }}
               _hover={{ bg: 'white' }}
             >
@@ -40,7 +40,7 @@ export default function ColorFilter() {
             pb={6}
             py={2}
             borderBottom="1px"
-            borderColor="gray.100"
+            borderColor={{ base: 'gray.100', lg: 'transparent' }}
           >
             <Wrap pb={3} spacing={2} letterSpacing="tighter">
               <WrapItem>
