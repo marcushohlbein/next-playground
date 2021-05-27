@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Divider, Image } from '@chakra-ui/react'
+import { Box, Divider, Image, Link } from '@chakra-ui/react'
 
 export default function ProductCard() {
   const property = {
@@ -16,12 +16,15 @@ export default function ProductCard() {
 
   return (
     <Box
+      as={Link}
+      href="/product"
       maxW="sm"
       borderWidth="1px"
       bg="white"
       borderRadius="lg"
       overflow="hidden"
       _hover={{
+        textDecoration: 'none',
         boxShadow: { lg: 'md' },
         borderColor: { lg: 'gray.300' },
       }}

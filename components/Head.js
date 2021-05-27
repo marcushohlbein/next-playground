@@ -11,7 +11,6 @@ import {
   DrawerHeader,
   DrawerBody,
   Center,
-  Spacer,
   InputGroup,
   InputLeftElement,
   Input,
