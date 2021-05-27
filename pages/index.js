@@ -70,17 +70,26 @@ export default function Home() {
 
           {FilterBarSwitcher}
 
-          <GridItem colSpan={[6, 6, 6, 5]} py={1}>
+          <GridItem
+            as={Flex}
+            colSpan={[6, 6, 6, 5]}
+            alignItems="flex-end"
+            py={1}
+          >
             <Heading
-              as={Flex}
               py={[0, 0, 0, 2]}
               fontWeight="900"
               fontSize="xl"
               color="gray.700"
-              justifyContent={{ base: 'center', lg: 'flex-start' }}
+              mr={2}
             >
               Sneaker
             </Heading>
+            <ItemCount
+              display={{ base: 'block', lg: 'none' }}
+              fontWeight="500"
+              count="1.234"
+            />
           </GridItem>
           <GridItem
             as={Flex}

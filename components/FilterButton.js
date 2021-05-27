@@ -1,12 +1,13 @@
-import { Center, Text } from '@chakra-ui/layout'
+import { Center, Flex, Spacer, Text } from '@chakra-ui/layout'
 import React from 'react'
 import { BiSlider } from 'react-icons/bi'
 
 export default function FilterButton({ onOpen }) {
   return (
     <Center
+      as={Flex}
       w="50%"
-      px={2}
+      px={4}
       py={2}
       mr={4}
       justify="flex-start"
@@ -16,10 +17,11 @@ export default function FilterButton({ onOpen }) {
       borderRadius="md"
       onClick={onOpen}
     >
-      <Text fontWeight="600" mr={4} fontWeight="bold">
+      <Text fontWeight="500" mr={4}>
         Filter
       </Text>
-      <BiSlider size="22" />
+      <Spacer />
+      <BiSlider float="right" size="22" />
     </Center>
   )
 }
