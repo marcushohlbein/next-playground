@@ -15,6 +15,9 @@ export default function GenderFilter() {
         <>
           <h2>
             <AccordionButton
+              py={3}
+              borderBottom={isExpanded ? 'none' : '1px'}
+              borderColor="gray.100"
               _focus={{ outline: 'none' }}
               _hover={{ bg: 'white' }}
             >
@@ -34,8 +37,13 @@ export default function GenderFilter() {
               )}
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={6}>
-            <Stack spacing={1} justify="flex-start">
+          <AccordionPanel
+            pb={6}
+            py={2}
+            borderBottom="1px"
+            borderColor="gray.100"
+          >
+            <Stack pb={2} spacing={1} justify="flex-start">
               <Checkbox
                 size="lg"
                 fontWeight="600"

@@ -14,6 +14,9 @@ export default function ColorFilter() {
         <>
           <h2>
             <AccordionButton
+              py={3}
+              borderBottom={isExpanded ? 'none' : '1px'}
+              borderColor="gray.100"
               _focus={{ outline: 'none' }}
               _hover={{ bg: 'white' }}
             >
@@ -33,8 +36,13 @@ export default function ColorFilter() {
               )}
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={6}>
-            <Wrap spacing={2} letterSpacing="tighter">
+          <AccordionPanel
+            pb={6}
+            py={2}
+            borderBottom="1px"
+            borderColor="gray.100"
+          >
+            <Wrap pb={3} spacing={2} letterSpacing="tighter">
               <WrapItem>
                 <Center
                   w="40px"

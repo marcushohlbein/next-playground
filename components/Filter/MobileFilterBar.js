@@ -40,7 +40,7 @@ export default function MobileFilterBar({ dfi, isOpen, onClose }) {
           </DrawerHeader>
 
           <DrawerBody p={1}>
-            <Accordion defaultIndex={dfi} allowMultiple reduceMotion="true">
+            <Accordion allowMultiple reduceMotion="true">
               <SizeFilter />
               <BrandFilter />
               <GenderFilter />
