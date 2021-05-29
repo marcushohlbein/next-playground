@@ -9,7 +9,7 @@ export default function ProductCard() {
     brand: 'Adidas',
     title: 'Yeezy Foam',
     sku: 'CW7645-003',
-    formattedPrice: '1.389,00 €',
+    formattedPrice: '119,54 €',
     reviewCount: 34,
     rating: 4,
   }
@@ -38,10 +38,10 @@ export default function ProductCard() {
           </Box>
         </Box>
 
-        <Box fontWeight="extrabold" as="h4" lineHeight="tight" isTruncated>
+        <Box fontWeight="extrabold" as="h4"lineHeight="tight" isTruncated>
           {property.title}
         </Box>
-        <Box color="gray.500" fontWeight="400" fontSize="12px">
+        <Box color="gray.500" fontWeight="400" fontSize="10px">
           {property.sku}
         </Box>
         <Divider my={2} />
@@ -63,7 +63,7 @@ export default function ProductCard() {
           <Box fontSize={{ base: 'xs', sm: 'sm' }} fontWeight="bold">
             <Box
               as="span"
-              fontSize={{ base: 'xs', sm: 'sm' }}
+              fontSize={{ base: '10px', sm: 'sm' }}
               mr={1}
               fontWeight="normal"
             >
