@@ -7,7 +7,6 @@ export default function SortButtonMobile({ setSort }) {
     <Select
       icon={<RiArrowUpDownLine />}
       variant="filled"
-      placeholder="Sortieren nach"
       color="gray.500"
       borderRadius={0}
       fontWeight="500"
