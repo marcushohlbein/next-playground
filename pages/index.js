@@ -37,7 +37,7 @@ export default function Home() {
   })
 
   const SortButtonSwitcher = useBreakpointValue({
-    base: <SortButtonMobile setSort={setSort} />,
+    base: <SortButtonMobile sort={sort} setSort={setSort} />,
     lg: <SortButton sort={sort} setSort={setSort} />,
   })
 

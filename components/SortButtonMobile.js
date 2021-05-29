@@ -2,10 +2,11 @@ import { Select } from '@chakra-ui/select'
 import React from 'react'
 import { RiArrowUpDownLine } from 'react-icons/ri'
 
-export default function SortButtonMobile({ setSort }) {
+export default function SortButtonMobile({ sort, setSort }) {
   return (
     <Select
       icon={<RiArrowUpDownLine />}
+      defaultValue={sort}
       variant="filled"
       color="gray.500"
       borderRadius={0}
