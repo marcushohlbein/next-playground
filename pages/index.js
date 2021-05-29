@@ -27,7 +27,7 @@ export default function Home() {
 
   const FilterBarSwitcher = useBreakpointValue({
     base: (
-      <MobileFilterBar dfi={defaultIndex} isOpen={isOpen} onClose={onClose} />
+      <MobileFilterBar isOpen={isOpen} onClose={onClose} />
     ),
     lg: <DesktopFilter dfi={defaultIndex} />,
   })
@@ -73,7 +73,7 @@ export default function Home() {
           <GridItem
             as={Flex}
             colSpan={[6, 6, 6, 5]}
-            alignItems="flex-end"
+            alignItems="baseline"
             py={1}
           >
             <Heading
