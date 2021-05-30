@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/layout'
 import { useBreakpointValue } from '@chakra-ui/media-query'
 import { useState } from 'react'
+import products from '../products'
 import DesktopFilter from '../components/Filter/DesktopFilterBar'
 import MobileFilterBar from '../components/Filter/MobileFilterBar'
 import Head from '../components/Head'
@@ -20,15 +21,13 @@ import Breadcrumbs from '../components/Breadcrumbs'
 import FilterButton from '../components/FilterButton'
 import SortButtonMobile from '../components/SortButtonMobile'
 
-export default function Home() {
+export default function Home({ products }) {
   const [sort, setSort] = useState('Relevanz')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [defaultIndex] = useState([0, 1, 2, 3])
 
   const FilterBarSwitcher = useBreakpointValue({
-    base: (
-      <MobileFilterBar isOpen={isOpen} onClose={onClose} />
-    ),
+    base: <MobileFilterBar isOpen={isOpen} onClose={onClose} />,
     lg: <DesktopFilter dfi={defaultIndex} />,
   })
   const FilterButtonSwitcher = useBreakpointValue({
@@ -105,54 +104,9 @@ export default function Home() {
           </GridItem>
           <GridItem colSpan={[6, 6, 6, 5]}>
             <SimpleGrid columns={[2, 2, 3, 4]} spacingX="15px" spacingY="15px">
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
+              {products.map(product => (
+                <ProductCard key={product.id} product={product} />
+              ))}
             </SimpleGrid>
           </GridItem>
           <GridItem colSpan={6} bg="tomato" p={4} />
@@ -160,4 +114,8 @@ export default function Home() {
       </Container>
     </>
   )
+}
+
+Home.getInitialProps = async ctx => {
+  return { products }
 }
