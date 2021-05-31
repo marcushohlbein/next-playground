@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { AspectRatio, Box, Divider, Link } from '@chakra-ui/react'
+import { Box, Divider, Link } from '@chakra-ui/react'
 
 export default function ProductCard({ product }) {
   return (

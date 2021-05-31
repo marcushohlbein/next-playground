@@ -18,6 +18,7 @@ import {
 } from '@chakra-ui/react'
 import Logo from './Logo'
 import { SearchIcon } from '@chakra-ui/icons'
+import { render } from 'react-dom'
 
 export default function Header(props) {
   const { isOpen, onOpen, onClose } = useDisclosure()
