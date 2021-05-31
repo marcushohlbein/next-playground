@@ -10,7 +10,7 @@ export default function DesktopFilterBar({ dfi }) {
   return (
     <GridItem
       as="aside"
-      display={{ base: 'none', lg: 'block' }}
+      //display={{ base: 'none', lg: 'block' }}
       rowSpan={3}
       colSpan={1}
     >
