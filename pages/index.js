@@ -10,7 +10,6 @@ import {
 } from '@chakra-ui/layout'
 import { useBreakpointValue } from '@chakra-ui/media-query'
 import { useState } from 'react'
-import products from '../products'
 import DesktopFilter from '../components/Filter/DesktopFilterBar'
 import MobileFilterBar from '../components/Filter/MobileFilterBar'
 import Head from '../components/Head'
@@ -22,6 +21,7 @@ import FilterButton from '../components/FilterButton'
 import SortButtonMobile from '../components/SortButtonMobile'
 
 export default function Home({ products }) {
+  const data = products.products
   const [sort, setSort] = useState('Relevanz')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [defaultIndex] = useState([0, 1, 2, 3])
@@ -104,7 +104,7 @@ export default function Home({ products }) {
           </GridItem>
           <GridItem colSpan={[6, 6, 6, 5]}>
             <SimpleGrid columns={[2, 2, 3, 4]} spacingX="15px" spacingY="15px">
-              {products.map(product => (
+              {data.map(product => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </SimpleGrid>
@@ -116,6 +116,8 @@ export default function Home({ products }) {
   )
 }
 
-Home.getInitialProps = async ctx => {
-  return { products }
+export const getServerSideProps = async ctx => {
+  const res = await fetch(`https://sneaker24.vercel.app/api/products`)
+  const products = await res.json()
+  return { props: { products } }
 }
