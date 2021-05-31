@@ -50,7 +50,7 @@ export default function Home({ products }) {
           maxW="1200px"
           templateColumns={{
             base: 'repeat(4, 1fr)',
-            md: '220px repeat(4, 1fr)',
+            lg: '220px repeat(4, 1fr)',
           }}
           gap={4}
           p={2}
