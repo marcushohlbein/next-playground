@@ -22,6 +22,7 @@ import SortButtonMobile from '../components/SortButtonMobile'
 
 export default function Home({ products }) {
   const data = products.products
+  console.log(data)
   const [sort, setSort] = useState('Relevanz')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [defaultIndex] = useState([0, 1, 2, 3])
