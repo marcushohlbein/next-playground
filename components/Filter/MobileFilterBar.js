@@ -15,7 +15,7 @@ import ColorFilter from './ColorFilter'
 import GenderFilter from './GenderFilter'
 import SizeFilter from './SizeFilter'
 
-export default function MobileFilterBar({ dfi, isOpen, onClose }) {
+export default function MobileFilterBar({ isOpen, onClose }) {
   if (isOpen) {
     return (
       <>

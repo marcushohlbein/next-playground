@@ -116,7 +116,7 @@ export default function Home({ products }) {
   )
 }
 
-export const getServerSideProps = async ctx => {
+export const getServerSideProps = async () => {
   const res = await fetch(`https://sneaker24.vercel.app/api/products`)
   const products = await res.json()
   return { props: { products } }

@@ -14,7 +14,7 @@ export default function ColorFilter() {
         <>
           <h2>
             <AccordionButton
-              py={3}
+              py={[3, 3, 3, 2]}
               borderBottom={isExpanded ? 'none' : '1px'}
               borderColor={{ base: 'gray.100', lg: 'transparent' }}
               _focus={{ outline: 'none' }}
