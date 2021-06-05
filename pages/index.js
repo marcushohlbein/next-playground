@@ -8,9 +8,10 @@ import {
   SimpleGrid,
   Spacer,
 } from '@chakra-ui/layout'
-import { url } from '../next.config'
+
 import { useBreakpointValue } from '@chakra-ui/media-query'
 import { useState } from 'react'
+
 import DesktopFilter from '../components/Filter/DesktopFilterBar'
 import MobileFilterBar from '../components/Filter/MobileFilterBar'
 import Head from '../components/Head'
@@ -21,7 +22,9 @@ import Breadcrumbs from '../components/Breadcrumbs'
 import FilterButton from '../components/FilterButton'
 import SortButtonMobile from '../components/SortButtonMobile'
 
-export default function Home({ products }) {
+import products from '../public/assets/products.json'
+
+export default function Home() {
   const [sort, setSort] = useState('Relevanz')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [defaultIndex] = useState([0, 1, 2, 3])
@@ -30,6 +33,7 @@ export default function Home({ products }) {
     base: <MobileFilterBar isOpen={isOpen} onClose={onClose} />,
     lg: <DesktopFilter dfi={defaultIndex} />,
   })
+  
   const FilterButtonSwitcher = useBreakpointValue({
     base: <FilterButton onOpen={onOpen} />,
     lg: <ItemCount count="1.234" />,
@@ -114,10 +118,4 @@ export default function Home({ products }) {
       </Container>
     </>
   )
-}
-
-export const getServerSideProps = async () => {
-  const res = await fetch(`${url}/api/products`)
-  const products = await res.json()
-  return { props: { products } }
 }
